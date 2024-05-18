@@ -15,9 +15,8 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/recipes">Recipes</NavLink></li>
+        <li><NavLink to="/recipes">Menu</NavLink></li>
         <li><NavLink to="/reviews">Reviwes</NavLink></li>
-        <li><NavLink to="/courses">Recipes</NavLink></li>
         <li><NavLink to="/blog">Blog</NavLink></li>
 
         {/* <li><NavLink to="/login">login</NavLink></li> */}
@@ -47,8 +46,9 @@ const Navbar = () => {
                     {
                         user ? <>
 
-                            <li><NavLink to="/blog">My reviews</NavLink></li>
-                            <li><NavLink to="/blog">Add Recipe</NavLink></li>
+                            <li><NavLink to="/myreviews">My reviews</NavLink></li>
+                            <li><NavLink to="/addnewmenu">Add New Menu</NavLink></li>
+                            <li><NavLink to="/cart">Cart</NavLink></li>
                         </>
                             : <>
                                 <li><NavLink to="/signup">Sign Up</NavLink></li>

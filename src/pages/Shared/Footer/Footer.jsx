@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <footer className="footer items-center p-4 bg-neutral text-neutral-content">
+        <footer className="footer items-center p-4 bg-neutral text-neutral-content flex flex-col">
             <aside className="items-center grid-flow-col">
                 <p>Copyright © 2024 - All right reserved by Tulis Kitchen</p>
             </aside>

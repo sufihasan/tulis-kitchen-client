@@ -3,6 +3,14 @@ import Main from "./Layout/Main";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
+import Recipes from "../pages/Recipes/Recipes";
+import RecipiDetails from "../pages/Home/Home/RecipiDetails";
+import Blogs from "../pages/Blogs/Blogs";
+import Cart from "../pages/Cart/Cart";
+import AddNewMenu from "../pages/AddNewMenu/AddNewMenu";
+import PrivateRoutes from "./PrivateRoutes";
+import AddReview from "../pages/AddReview/AddReview";
+import MyReviews from "../pages/MyReviews/MyReviews";
 
 
 const router = createBrowserRouter([
@@ -12,7 +20,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('http://localhost:5000/homerecipes')
             },
             {
                 path: '/login',
@@ -21,6 +30,42 @@ const router = createBrowserRouter([
             {
                 path: 'signup',
                 element: <Signup></Signup>
+            },
+            {
+                path: 'recipes',
+                element: <Recipes></Recipes>
+            },
+            {
+                path: 'recipes/:id',
+                element: <RecipiDetails></RecipiDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.id}`)
+            },
+            {
+                path: 'myreviews',
+                element: <PrivateRoutes><MyReviews></MyReviews></PrivateRoutes>,
+                loader: () => fetch('http://localhost:5000/reviews')
+            },
+            {
+                path: 'addreview/:id',
+                element: <AddReview></AddReview>,
+                loader: ({ params }) => { const id = params.id; return id; }
+            },
+            {
+                path: 'cart',
+                element: <Cart></Cart>,
+            },
+            {
+                path: 'cart/:id',
+                element: <Cart></Cart>,
+            },
+            {
+                path: 'addnewmenu',
+                element: <PrivateRoutes><AddNewMenu></AddNewMenu></PrivateRoutes>,
+            },
+
+            {
+                path: 'blog',
+                element: <Blogs></Blogs>
             }
         ]
     },

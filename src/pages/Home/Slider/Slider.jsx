@@ -2,19 +2,19 @@
 
 const Slider = () => {
     return (
-        <div className="w-3/4 mx-auto">
+        <div className="">
             <div className="carousel w-full">
                 <div id="item1" className="carousel-item w-full">
-                    <img src="https://i.ibb.co/6HdbDsg/beef-curry.jpg" className="w-full h-[500px]" />
+                    <img src="https://i.ibb.co/j8hw5Q1/tusl1.png" className="w-full h-[500px]" />
                 </div>
                 <div id="item2" className="carousel-item w-full">
-                    <img src="https://i.ibb.co/7KvpsTr/checken.jpg" className="w-full h-[500px]" />
+                    <img src="https://i.ibb.co/XWYqJrR/tusl2.png" className="w-full h-[500px]" />
                 </div>
                 <div id="item3" className="carousel-item w-full">
                     <img src="https://i.ibb.co/yRF4R2w/Shorshe-Ilish.webp" className="w-full h-[500px]" />
                 </div>
                 <div id="item4" className="carousel-item w-full">
-                    <img src="https://i.ibb.co/F8GGkbB/plane-polaw.webp " className="w-full h-[500px]" />
+                    <img src="https://i.ibb.co/wQqHqKr/tusl3.png" className="w-full h-[500px]" />
                 </div>
             </div>
             <div className="flex justify-center w-full py-2 gap-2">
