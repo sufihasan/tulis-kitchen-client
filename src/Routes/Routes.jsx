@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/homerecipes')
+                loader: () => fetch('https://tuli-kitchen-server.vercel.app/homerecipes')
             },
             {
                 path: '/login',
@@ -38,12 +38,12 @@ const router = createBrowserRouter([
             {
                 path: 'recipes/:id',
                 element: <RecipiDetails></RecipiDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.id}`)
+                loader: ({ params }) => fetch(`https://tuli-kitchen-server.vercel.app/recipes/${params.id}`)
             },
             {
                 path: 'myreviews',
                 element: <PrivateRoutes><MyReviews></MyReviews></PrivateRoutes>,
-                loader: () => fetch('http://localhost:5000/reviews')
+                loader: () => fetch('https://tuli-kitchen-server.vercel.app/reviews')
             },
             {
                 path: 'addreview/:id',

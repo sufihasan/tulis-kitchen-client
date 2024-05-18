@@ -15,7 +15,7 @@ const AddNewMenu = () => {
 
         console.log(newRecipe);
         //send data to server
-        fetch('http://localhost:5000/recipes', {
+        fetch('https://tuli-kitchen-server.vercel.app/recipes', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

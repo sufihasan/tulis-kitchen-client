@@ -13,7 +13,7 @@ const ReviewShow = ({ id }) => {
     console.log(result1);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://tuli-kitchen-server.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])
